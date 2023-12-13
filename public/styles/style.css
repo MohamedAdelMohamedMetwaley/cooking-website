@@ -1,0 +1,128 @@
+html,body{
+    margin: 0;
+}
+
+body{
+    background-color: #F9E8D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Navigation bar */
+
+nav{
+    font-family: cursive, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #EE7214;
+    padding-right: 30px;
+    color: white;
+    box-sizing: border-box;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+nav > h2{
+    font-size: 28px;
+    float: left;
+    margin: 10px auto 10px 45%;
+}
+nav > div{
+    float: right;
+
+}
+nav a{
+    color: white ;
+    font-size: 17px;
+    padding: 15px 10px;
+    margin: 0 -2.5px;
+    margin-right: -5px;
+}
+
+/* Main body */
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+/* Search form */
+form{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/search-background.jpg");
+    background-size: cover;
+}
+
+[type="text"]{
+    margin-top: 250px;
+    outline: none;
+    border: none;
+    width: 30%;
+    height: 40px;
+    opacity: 0.75;
+    padding-left: 40px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDIgNDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQwLjgxIDM1LjMybC05Ljk4Ni05Ljk4NWExNi4yNiAxNi4yNiAwIDAgMCAyLjM3My04LjQ4NUMzMy4xOTcgNy44MjIgMjUuMzc0IDAgMTYuMzQ1IDAgNy4zMiAwIDAgNy4zMiAwIDE2LjM0N2MwIDkuMDI4IDcuODIyIDE2Ljg1IDE2Ljg1IDE2Ljg1IDMgMCA1LjgxMi0uODE0IDguMjMtMi4yMjZsMTAuMDM3IDEwLjA0YTIuNTE0IDIuNTE0IDAgMCAwIDMuNTU3IDBsMi40OS0yLjQ5Yy45ODMtLjk4Mi42MjctMi4yMi0uMzU1LTMuMnpNNS4wMyAxNi4zNDZjMC02LjI1IDUuMDY3LTExLjMxNyAxMS4zMTUtMTEuMzE3IDYuMjUgMCAxMS44MiA1LjU3IDExLjgyIDExLjgyUzIzLjEgMjguMTY3IDE2Ljg1IDI4LjE2N2MtNi4yNSAwLTExLjgyLTUuNTctMTEuODItMTEuODJ6IiBmaWxsPSIjYTFhMWExIi8+PC9zdmc+");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 5px center;
+    font-size: 22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+[type="button"]{
+    position: absolute;
+    left: -100px;
+    width: 1px;
+    height: 1px;
+}
+
+/* Popular dishes section */
+
+.popularDishesH2{
+    margin-top: 150px;
+    font-size: 36px;
+    color: #FB8B24;
+
+}
+
+.popularDishes{
+    display: flex;
+    gap: 30px;
+}
+
+.popularDishes > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.popularDishes a{
+    /* border: 10px ridge white; */
+    box-shadow: 15px 9px 9px #527853;
+    margin: 0;
+}
+
+.popularDishes img{
+    display: block;
+}
+
+/* additional */
+
+a{
+    text-decoration: none;
+}
+.amadina-font{
+    font-family: 'Adamina', serif;
+}
+.sourceSerif-font{
+    font-family: 'Source Serif 4', serif;
+}
