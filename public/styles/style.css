@@ -3,7 +3,7 @@ html,body{
 }
 
 body{
-    background-color: #F9E8D9;
+    /* background-color: #F9E8D9; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,14 +34,17 @@ nav > h2{
 }
 nav > div{
     float: right;
-
 }
 nav a{
     color: white ;
     font-size: 17px;
-    padding: 15px 10px;
+    padding: 18px 20px;
     margin: 0 -2.5px;
-    margin-right: -5px;
+    margin-right: -6px;
+    transition: 0.6s;
+}
+nav a:hover{
+    background-color: #527853;
 }
 
 /* Main body */
@@ -97,22 +100,60 @@ form{
 
 .popularDishes{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
+    width: 100%;
+    margin-bottom: 500px;
 }
 
-.popularDishes > div{
+.popularDishes > a{
+    position: relative;
     display: flex;
     flex-direction: column;
+    align-items: start;
+    text-align: start;
+    margin: 0;
+    width: 25%;
+    height: 330px;
+    border: 1px solid #e6e6e6;
+    border-style: groove;
+    transition: 0.3s;
 }
 
-.popularDishes a{
-    /* border: 10px ridge white; */
-    box-shadow: 15px 9px 9px #527853;
-    margin: 0;
+.popularDishes a:hover{
+    text-decoration: underline;
+    color: black;
+    box-shadow: 1px 1px 12px 6px rgb(182, 180, 180);
 }
 
 .popularDishes img{
     display: block;
+    width: 100%;
+    height: auto;
+}
+
+.popularDishes p{
+    font-size: 1.1vw;
+    font-weight: bold;
+    color: black;
+    margin: 5px 10px;
+}
+#cooking-time{
+    font-weight: normal;
+    font-size: 17px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+}
+.servings{
+    position: absolute;
+    font-weight: normal;
+    opacity: 0.8;
+    bottom: 0;
+    right: 0;
 }
 
 /* additional */

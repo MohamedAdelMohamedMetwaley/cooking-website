@@ -16,15 +16,17 @@ app.get("/", (req, res) => {
     res.render("index.ejs", {
       image1: randImgs[0],
       image2: randImgs[1],
-      image3: randImgs[2]
-      
+      image3: randImgs[2],
+      image4: randImgs[3],
+      image5: randImgs[4],
+      image6: randImgs[5]
     })
 })
 
 // Listen method
 app.listen(port, async (req, res) => {
     try {
-        const result = await axios.get(`${apiURL}recipes/random${apikey}&number=3`,apikey);
+        const result = await axios.get(`${apiURL}recipes/random${apikey}&number=6&tags=main course,side dish,lunch, main dish`,apikey);
         randImgs = result.data.recipes;
       } catch (error) {
         console.log("Error: ", JSON.stringify(error.message));
