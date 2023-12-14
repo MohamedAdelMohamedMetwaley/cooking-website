@@ -11,6 +11,21 @@ body{
     justify-content: center;
 }
 
+/* Browse page */
+.browse{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+    background-color: #F9E8D9;
+}
+.browse > a{
+    border: 1px solid rgb(220, 215, 215);
+}
+
 /* Navigation bar */
 
 nav{
@@ -108,7 +123,7 @@ form{
     margin-bottom: 500px;
 }
 
-.popularDishes > a{
+.recipeCard{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -116,30 +131,31 @@ form{
     text-align: start;
     margin: 0;
     width: 25%;
-    height: 330px;
+    height: 340px;
     border: 1px solid #e6e6e6;
     border-style: groove;
     transition: 0.3s;
 }
 
-.popularDishes a:hover{
+.recipeCard:hover{
     text-decoration: underline;
     color: black;
     box-shadow: 1px 1px 12px 6px rgb(182, 180, 180);
 }
 
-.popularDishes img{
+.recipeCard > img{
     display: block;
     width: 100%;
     height: auto;
 }
 
-.popularDishes p{
+.recipeCard > p{
     font-size: 1.1vw;
     font-weight: bold;
     color: black;
     margin: 5px 10px;
 }
+
 #cooking-time{
     font-weight: normal;
     font-size: 17px;

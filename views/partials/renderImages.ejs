@@ -1,0 +1,8 @@
+<% for(i = 0; i < locals.images.length; i++) {%>
+    <a class="recipeCard" href="">
+        <img src="<%= images[i].image %>" alt="<%- images[i].title %>" height="270px">
+        <p><%= images[i].title %></p>
+        <p id="cooking-time"><%= images[i].readyInMinutes %> minutes</p>
+        <p class="servings">servings: <%= images[i].servings %></p>
+    </a>
+<% } %>
