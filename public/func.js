@@ -1,12 +1,21 @@
-document.querySelector("[type='text']").addEventListener("keypress", async (event) => {
+var favourites = []
+
+document.querySelector("[type='text']").addEventListener("keypress", (event) => {
     var typedWord = event.target.value+event.key;
     getSuggestions(typedWord);
 })
 
-document.addEventListener("keydown", async (event) => {
+document.addEventListener("keydown", (event) => {
     var typedWord = event.target.value;
     if(event.key === 'Backspace')
         getSuggestions(typedWord.slice(0, typedWord.length-1));
+})
+
+document.querySelectorAll("#fav-icon").forEach(btn => {
+    btn.addEventListener("click", (event) => {
+    favourites.push(event.target.parentNode.parentNode);
+    console.log(favourites)
+})
 })
 
 function getSuggestions(typedWord){
@@ -27,5 +36,4 @@ function getSuggestions(typedWord){
     }
     else 
         document.querySelector(".list-group").innerHTML = "";
-
 }

@@ -1,8 +1,11 @@
 <% for(i = 0; i < locals.images.length; i++) {%>
-    <a class="recipeCard" href="">
-        <img src="<%= images[i].image %>" alt="<%- images[i].title %>" height="270px">
-        <p><%= images[i].title %></p>
-        <p id="cooking-time"><%= images[i].readyInMinutes %> minutes</p>
-        <p class="servings">servings: <%= images[i].servings %></p>
-    </a>
+    <div class="recipeCard">
+        <a href="">
+            <img src="<%= images[i].image %>" alt="<%- images[i].title %>" height="270px">
+            <p><%= images[i].title %></p>
+            <p id="cooking-time"><%= images[i].readyInMinutes %> minutes</p>
+            <p class="servings">servings: <%= images[i].servings %></p>        
+        </a>
+        <a id="fav-icon" href="javascript:void(0)"><img src="./images/fav.png" alt=""></a>
+    </div>
 <% } %>

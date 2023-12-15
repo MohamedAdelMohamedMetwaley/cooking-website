@@ -24,6 +24,10 @@ app.get("/browse", async (req, res) => {
     })
 })
 
+app.get("/favourites", (req, res) => {
+  res.render("favourites.ejs")
+})
+
 // Listen method
 app.listen(port, async (req, res) => {
     try {
