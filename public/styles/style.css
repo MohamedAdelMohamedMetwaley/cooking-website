@@ -12,8 +12,8 @@ body{
     justify-content: center;
 }
 
-/* Browse page */
-.browse{
+/* Browse & Favourites styling */
+.browse, .favourites{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -28,14 +28,13 @@ body{
 }
 
 /* Navigation bar */
-
 nav{
     font-family: cursive, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
     width: 100%;
-    display: flex;
+    grid-template: 1fr / 0.75fr 1fr 1fr 3fr 3fr;
     align-items: center;
     background-color: #EE7214;
-    padding-right: 30px;
     color: white;
     box-sizing: border-box;
     font-weight: bold;
@@ -45,22 +44,29 @@ nav{
 }
 nav > h2{
     font-size: 28px;
-    float: left;
-    margin: 10px auto 10px 45%;
+    grid-column-start: 4;
+    margin: 0;
 }
 nav > div{
-    float: right;
+    display: flex;
+    justify-content: end;
+    grid-column-start: 5;
 }
 nav a{
     color: white ;
     font-size: 17px;
     padding: 18px 20px;
-    margin: 0 -2.5px;
-    margin-right: -6px;
-    transition: 0.4s;
 }
-nav a:hover{
+/* Highlight the current page in the navbar */
+.browse .nav-browse, .home .nav-home, .favourites .nav-fav{
     background-color: #527853;
+}
+
+.signin{grid-column-start: 1;}
+
+nav a:hover{
+    transition: 0.3s;
+    background-color: #4a8d4c;
 }
 
 /* Main body */

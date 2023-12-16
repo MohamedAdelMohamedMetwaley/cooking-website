@@ -32,6 +32,10 @@ app.get("/favourites", (req, res) => {
   })
 })
 
+app.get("/signin", (req, res) => {
+  res.render("signin.ejs")
+})
+
 app.post("/addFav", (req, res) => {
   if(req.body.newFavClass === "browseImg"){
     var newFavourite = browseImgs[req.body.newFavID];
