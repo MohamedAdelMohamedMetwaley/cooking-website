@@ -11,7 +11,7 @@
         </form>
         <h2 class="popularDishesH2 sourceSerif-font">Popular Dishes</h2>
         <div class="popularDishes sourceSerif-font">
-            <%- include("./partials/renderImages.ejs", {images: images}) %>
+            <%- include("./partials/renderImages.ejs", {images: images, imgClass: "popularDishesImg"}) %>
         </div>
     </main>
     <footer>
@@ -20,4 +20,6 @@
 </body>
 </html>
 <script src="./func.js">
+</script>
+<script src="./addToFav.js">
 </script>

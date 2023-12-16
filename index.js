@@ -8,9 +8,11 @@ const apiURL = "https://api.spoonacular.com"
 const apikey = "?apiKey=7a390b2a08f54376bfb7bafc98c8c5e9";
 var randImgs = [];
 var browseImgs = [];
+var favourites = [];
 
 app.use(express.static("./public/"))
-app.use(bodyParser.urlencoded({ extended: true }))
+// app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
     res.render("index.ejs", {
@@ -25,7 +27,25 @@ app.get("/browse", async (req, res) => {
 })
 
 app.get("/favourites", (req, res) => {
-  res.render("favourites.ejs")
+  res.render("favourites.ejs",{
+    favourites: favourites
+  })
+})
+
+app.post("/addFav", (req, res) => {
+  if(req.body.newFavClass === "browseImg"){
+    var newFavourite = browseImgs[req.body.newFavID];
+    newFavourite.isFav = true;
+    favourites.push(newFavourite);
+  }
+  else if(req.body.newFavClass === "popularDishesImg"){
+    var newFavourite = randImgs[req.body.newFavID];
+    newFavourite.isFav = true;
+    favourites.push(newFavourite)
+  }
+  else {
+    console.log("Already added this to favourite")
+  }
 })
 
 // Listen method
@@ -44,4 +64,3 @@ app.listen(port, async (req, res) => {
 function randImagesURL(number, tags){
   return `${apiURL}/recipes/random${apikey}&number=${number}&tags=${tags}`
 }
- 

@@ -6,6 +6,9 @@
             <p id="cooking-time"><%= images[i].readyInMinutes %> minutes</p>
             <p class="servings">servings: <%= images[i].servings %></p>        
         </a>
-        <a id="fav-icon" href="javascript:void(0)"><img src="./images/fav.png" alt="fav-icon"></a>
+        <% var favIconClass = imgClass; 
+        if(images[i].isFav) 
+            favIconClass = "favouritesImg" %>
+        <a class="<%- favIconClass %>" id="fav-icon" href="javascript:void(0)"><img id="<%- i %>" src="./images/fav.png" alt="fav-icon"></a>
     </div>
 <% } %>

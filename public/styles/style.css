@@ -211,3 +211,6 @@ a{
     margin: auto;
     /* opacity: 0.6; */
 }
+.favouritesImg{
+    display: none !important;
+}
