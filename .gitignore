@@ -1,3 +1,4 @@
 Design_Ideas/
+node_modules/
 *.log
 .env
