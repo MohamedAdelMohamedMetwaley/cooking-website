@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express from "express"
 import bodyParser from "body-parser"
 import axios from "axios";
@@ -5,7 +6,6 @@ import axios from "axios";
 const app = express();
 const port = 3000;
 const apiURL = "https://api.spoonacular.com"
-const apikey = "?apiKey=7a390b2a08f54376bfb7bafc98c8c5e9";
 var randImgs = [];
 var browseImgs = [];
 var favourites = [];
@@ -66,5 +66,5 @@ app.listen(port, async (req, res) => {
 })
 
 function randImagesURL(number, tags){
-  return `${apiURL}/recipes/random${apikey}&number=${number}&tags=${tags}`
+  return `${apiURL}/recipes/random?apiKey=${process.env.API_KEY}&number=${number}&tags=${tags}`
 }
